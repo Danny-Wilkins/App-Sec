@@ -3,3 +3,6 @@ Python3
 Pillow (pip3 install pillow)
 
 Usage:
+python app_sec_app.py
+
+Follow the instructions (give file path, dimensions, new image is created in image directory)
