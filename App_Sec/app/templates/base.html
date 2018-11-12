@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>ImageSquared</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    </head>
+
+    <body>
+        <a href="top">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="{{url_for('index')}}"><img class="icon" src="{{url_for('static', filename='img/icon.png')}}"></img>
+                        </a>
+                        <a class="navbar-text" href="{{url_for('index')}}">ImageSquared</a>
+                        {% if current_user.is_anonymous %}
+                        <a class="navbar-text" href="{{url_for('login')}}",style="text-align: right">Login</a>
+                        {% else %}
+                        <a class="navbar-text" href="{{ url_for('logout') }}">Logout</a>
+                        {% endif %}
+                        <a class="navbar-text" href={{url_for('gallery')}}>Gallery</a>
+                    </div>
+                </div>
+            </nav>
+        </a>
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron text-center" id="top" style="background-image: url({{url_for('static', filename='img/food.jpg')}}); background-size:cover;">
+    <h1>{{user.username}}'s Gallery</h1>
+    {% for image in user.images %}
+    <div class="container">
+            <img class="icon" src="{{url_for('uploaded_file')}}", filename=image.url)}}>
+    </div>
+    {% endfor %}
+</div>
+<!-- Having some trouble figuring out how the relational database works but almost there -->
+{% endblock %}

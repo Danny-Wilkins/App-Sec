@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- <div class="container" style="padding-top:60px"> -->
+    <div class="jumbotron text-center" id="top" style="background-image: url({{url_for('static', filename='img/food.jpg')}}); background-size:cover;">
+        <div class="container">
+            <h1>Image Squaring Tool</h1>
+            <form method=post enctype=multipart/form-data>
+                <h3></4>Choose file:</h3>
+                <input type=file name=file>
+                <br>
+                <h3>Enter width:</h3> 
+                <input type=text name=size>
+                <br>
+                <input type=submit value=Upload>
+            </form>
+        </div>
+    </div>
+{% endblock %}
