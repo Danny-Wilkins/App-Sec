@@ -2,7 +2,7 @@
 
 {% block content %}
     <!-- <div class="container" style="padding-top:60px"> -->
-    <div class="jumbotron text-center" id="top" style="background-image: url({{url_for('static', filename='img/food.jpg')}}); background-size:cover;">
+    <div class="jumbotron text-center" id="top" style="background-image: {{url_for('static', filename='img/icon.png')}}; background-size:cover;">
         <div class="container">
             <h1>Image Squaring Tool</h1>
             <form method=post enctype=multipart/form-data>

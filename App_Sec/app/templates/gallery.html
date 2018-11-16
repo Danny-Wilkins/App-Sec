@@ -2,10 +2,11 @@
 
 {% block content %}
 <div class="jumbotron text-center" id="top" style="background-image: url({{url_for('static', filename='img/food.jpg')}}); background-size:cover;">
-    <h1>{{user.username}}'s Gallery</h1>
-    {% for image in user.images %}
+    <h1>{{current_user.username}}'s Gallery</h1>
+    {% for image in current_user.images.all() %}
+    <br>
     <div class="container">
-            <img class="icon" src="{{url_for('uploaded_file')}}", filename=image.url)}}>
+            <img src="{{url_for('uploaded_file', filename=image.url)}}">
     </div>
     {% endfor %}
 </div>

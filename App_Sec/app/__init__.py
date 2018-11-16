@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_talisman import Talisman, GOOGLE_CSP_POLICY
+from logging.config import dictConfig
 
 app = Flask(__name__)
 talisman = Talisman(app, content_security_policy=GOOGLE_CSP_POLICY) #This seems to still be a little too restrictive
