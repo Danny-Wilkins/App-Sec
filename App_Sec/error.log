@@ -76,3 +76,1874 @@ INFO:flask.app:potato successfully uploaded square_lake.jpg
 INFO:werkzeug:127.0.0.1 - - [16/Nov/2018 01:12:44] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
 INFO:flask.app:potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
 INFO:werkzeug:127.0.0.1 - - [16/Nov/2018 01:12:44] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2018 09:12:22] "[33mGET /error.log HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Nov/2018 09:12:31] "[33mGET /error.log HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 218-426-133
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:33] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:33] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:33] "[37mGET /static/img/icon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:34] "[37mGET /static/img/food_background.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:36] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:36] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:39] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:39] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:39] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:41] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:41] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_lake.jpg
+INFO:flask.app:potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:41] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:41] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:44] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:15:44] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:16:27] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:16:27] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:16:27] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 124044lpr.jpg
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 50, in index
+    app.logger.info("%s uploaded %s", current_user.username, file.filename)
+AttributeError: 'Image' object has no attribute 'filename'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 55, in index
+    app.logger.info("%s uploaded %s", current_user.username, file.filename)
+AttributeError: 'Image' object has no attribute 'filename'
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:18:55] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:18:58] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:18:58] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 124044lpr.jpg
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: image.url
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 48, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2313, in flush
+    self._flush(objects)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2440, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 249, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2404, in _flush
+    flush_context.execute()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 395, in execute
+    rec.execute(self)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 560, in execute
+    uow
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 872, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_124044lpr.jpg', 1)] (Background on this error at: http://sqlalche.me/e/gkpj)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 53, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 465, in commit
+    self._assert_active(prepared_ok=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 276, in _assert_active
+    % self._rollback_exception
+sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_124044lpr.jpg', 1)] (Background on this error at: http://sqlalche.me/e/gkpj)
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:00] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:01] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:01] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 23319136_1701596476529771_2479487601320492150_n.jpg
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: image.url
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 48, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2313, in flush
+    self._flush(objects)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2440, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 249, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2404, in _flush
+    flush_context.execute()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 395, in execute
+    rec.execute(self)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 560, in execute
+    uow
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 872, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_23319136_1701596476529771_2479487601320492150_n.jpg', 1)] (Background on this error at: http://sqlalche.me/e/gkpj)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 53, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 465, in commit
+    self._assert_active(prepared_ok=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 276, in _assert_active
+    % self._rollback_exception
+sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_23319136_1701596476529771_2479487601320492150_n.jpg', 1)] (Background on this error at: http://sqlalche.me/e/gkpj)
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:07] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:09] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:09] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:18] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:18] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:18] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:18] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:18] "[37mGET /uploads/square_124044lpr.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:19] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:19] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 23319136_1701596476529771_2479487601320492150_n.jpg
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: image.url
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 48, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2313, in flush
+    self._flush(objects)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2440, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 249, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2404, in _flush
+    flush_context.execute()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 395, in execute
+    rec.execute(self)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 560, in execute
+    uow
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 872, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_23319136_1701596476529771_2479487601320492150_n.jpg', 1)] (Background on this error at: http://sqlalche.me/e/gkpj)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 53, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 465, in commit
+    self._assert_active(prepared_ok=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 276, in _assert_active
+    % self._rollback_exception
+sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_23319136_1701596476529771_2479487601320492150_n.jpg', 1)] (Background on this error at: http://sqlalche.me/e/gkpj)
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:24] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:27] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:27] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 23319136_1701596476529771_2479487601320492150_n.jpg
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: image.url
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 48, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2313, in flush
+    self._flush(objects)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2440, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 249, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2404, in _flush
+    flush_context.execute()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 395, in execute
+    rec.execute(self)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 560, in execute
+    uow
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 872, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_23319136_1701596476529771_2479487601320492150_n.jpg', 1)] (Background on this error at: http://sqlalche.me/e/gkpj)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 53, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 465, in commit
+    self._assert_active(prepared_ok=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 276, in _assert_active
+    % self._rollback_exception
+sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_23319136_1701596476529771_2479487601320492150_n.jpg', 1)] (Background on this error at: http://sqlalche.me/e/gkpj)
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:45] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:47] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:47] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged out successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:53] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:53] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:19:53] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 41, in index
+    file = square(filename, int(list(request.form.items())[0][1]))
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 75, in square
+    app.logger.info("%s resized %s", current_user.username, image_name)
+  File "/usr/lib/python3.6/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'username'
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:20:00] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:06] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:06] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:07] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:07] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:08] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:08] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:27] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:27] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:27] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:27] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:27] "[37mGET /uploads/square_124044lpr.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:28] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:28] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged out successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:29] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:29] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:29] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:30] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:30] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:32] "[37mGET /register HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:32] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:<User danny> registered successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:53] "[32mPOST /register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:53] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:21:53] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:danny logged in successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:22:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:22:15] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:22:15] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:22:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask.app:danny resized 23319136_1701596476529771_2479487601320492150_n.jpg
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: image.url
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 48, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2313, in flush
+    self._flush(objects)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2440, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 249, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2404, in _flush
+    flush_context.execute()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 395, in execute
+    rec.execute(self)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 560, in execute
+    uow
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 872, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_23319136_1701596476529771_2479487601320492150_n.jpg', 2)] (Background on this error at: http://sqlalche.me/e/gkpj)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 53, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 465, in commit
+    self._assert_active(prepared_ok=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 276, in _assert_active
+    % self._rollback_exception
+sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_23319136_1701596476529771_2479487601320492150_n.jpg', 2)] (Background on this error at: http://sqlalche.me/e/gkpj)
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:22:27] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:22:29] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:22:29] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:danny logged out successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:22:33] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:22:33] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:22:33] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:22:34] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:22:34] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:danny logged in successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:00] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:00] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:00] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:02] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:02] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask.app:danny logged out successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:04] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:04] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:04] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:12] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:12] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:14] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:14] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask.app:danny logged in successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:21] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:21] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:26] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:26] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:25:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:27:19] "[1m[31mPOST /uploads/square_lake.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:27:23] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:27:23] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:27:31] "[1m[31mPOST /uploads/square_lake.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:27:32] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:27:32] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:27:43] "[1m[31mPOST /uploads/square_lake.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:27:45] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:27:45] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:danny logged out successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:04] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:04] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:04] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:05] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:05] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:06] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:06] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 41, in index
+    file = square(filename, int(list(request.form.items())[0][1]))
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 73, in square
+    img = im.open(image_name)
+  File "/usr/lib/python3.6/site-packages/PIL/Image.py", line 2657, in open
+    % (filename if filename else fp))
+OSError: cannot identify image file 'cert.jpg'
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:14] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:16] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:16] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 124044lpr.jpg
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: image.url
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 48, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2313, in flush
+    self._flush(objects)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2440, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 249, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2404, in _flush
+    flush_context.execute()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 395, in execute
+    rec.execute(self)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 560, in execute
+    uow
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 872, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_124044lpr.jpg', 1)] (Background on this error at: http://sqlalche.me/e/gkpj)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 53, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 465, in commit
+    self._assert_active(prepared_ok=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 276, in _assert_active
+    % self._rollback_exception
+sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_124044lpr.jpg', 1)] (Background on this error at: http://sqlalche.me/e/gkpj)
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:23] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:45] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:45] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:47] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:47] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:47] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:47] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:47] "[37mGET /uploads/square_124044lpr.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:28:56] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged out successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:20] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:20] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:20] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:22] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:22] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:danny logged in successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:27] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:27] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask.app:danny resized 124044lpr.jpg
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: image.url
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 48, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2313, in flush
+    self._flush(objects)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2440, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 249, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2404, in _flush
+    flush_context.execute()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 395, in execute
+    rec.execute(self)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 560, in execute
+    uow
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 872, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_124044lpr.jpg', 2)] (Background on this error at: http://sqlalche.me/e/gkpj)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 53, in index
+    db.session.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 465, in commit
+    self._assert_active(prepared_ok=True)
+  File "/usr/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 276, in _assert_active
+    % self._rollback_exception
+sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.IntegrityError) UNIQUE constraint failed: image.url [SQL: 'INSERT INTO image (url, user_id) VALUES (?, ?)'] [parameters: ('square_124044lpr.jpg', 2)] (Background on this error at: http://sqlalche.me/e/gkpj)
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:34] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:35] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:35] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:36] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:36] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:39] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:flask.app:danny logged out successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:42] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:42] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:42] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:43] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:45] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:45] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:45] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged out successfully
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:48] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2018 12:30:48] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 12:58:50] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 12:58:50] "[37mGET /static/img/icon.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 12:58:50] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 12:58:50] "[37mGET /static/img/food_background.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 12:58:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 41, in index
+    file = square(filename, int(list(request.form.items())[0][1]))
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 75, in square
+    app.logger.info("%s resized %s", current_user.username, image_name)
+  File "/usr/lib/python3.6/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'username'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 12:58:57] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 284-984-640
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:10] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:10] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:20] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:20] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:20] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:20] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:20] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:20] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:20] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:28] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:28] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:31] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:31] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:39] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:39] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:39] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:48] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:48] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:48] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:48] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:48] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:01:48] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:05:31] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:05:31] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:05:37] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:05:37] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:05:37] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:05:37] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:05:37] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:05:37] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:06:58] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:06:58] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:07:07] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:07:07] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:07:07] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:07:07] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:07:07] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:07:07] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:07:19] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:07:19] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:08:14] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:08:14] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:08:16] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:08:16] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:08:16] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:08:16] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:08:16] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:08:16] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:09:30] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:09:30] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:09:36] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:09:36] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:09:36] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:09:36] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:09:36] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:09:36] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 128-467-992
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 146-960-910
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 324-573-467
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:15:58] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:15:58] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:01] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:01] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:06] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:06] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:13] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:13] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:13] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:13] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:13] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:13] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:20] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:20] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:23] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:23] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:23] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:23] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:23] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:23] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:25] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:16:25] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 306-922-741
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:36] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:36] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:36] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:36] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:36] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:36] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:40] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:40] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:41] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:41] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:47] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:47] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:55] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:flask.app:potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:55] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:59] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:17:59] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:18:01] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:18:01] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:18:02] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:18:02] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:18:02] "[37mGET /uploads/square_124044lpr.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:18:05] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged out successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:18:06] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:18:06] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:18:06] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 130-883-871
+INFO:flask.app:Anonymous user resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:19:19] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:19:19] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:19:19] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 303-701-254
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:19:44] "[1m[31mPOST /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:19:48] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:19:48] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:19:53] "[1m[31mPOST /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:19:54] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:19:54] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:00] "[1m[31mGET /gallery HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:02] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:02] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:10] "[1m[31mPOST /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:11] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:11] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 115-092-868
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:27] "[1m[31mPOST /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:30] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:30] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:32] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:32] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:38] "[1m[31mPOST /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:39] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:39] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:42] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:47] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:47] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:54] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:flask.app:potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:54] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:55] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:55] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged out successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:57] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:57] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:57] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:20:57] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:21:00] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:21:00] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:21:05] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:21:05] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:21:05] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:21:05] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:21:05] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:21:05] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 250-617-251
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 326-234-009
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:21:37] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:21:37] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:Anonymous resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:21:39] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:21:39] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:21:39] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 587-077-651
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:22:01] "[1m[31mPOST /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:22:04] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:22:04] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 623-493-772
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 174-424-974
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:26] "[1m[31mPOST /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:27] "[1m[35mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:27] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:27] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:27] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:27] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:27] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:27] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:28] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:28] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 178-858-561
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 105-469-683
+INFO:flask.app:Anonymous resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:44] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:44] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:44] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:24:53] "[1m[31mPOST /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 121-150-549
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:25:15] "[1m[31mPOST /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:25:16] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:25:16] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:25:21] "[1m[31mPOST /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:25:27] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:25:27] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-611-611
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:25:53] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:25:53] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:25:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:25:59] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:25:59] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato resized lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:26:04] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:flask.app:potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:26:04] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:26:05] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:26:05] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:26:07] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:26:07] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:26:07] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:26:07] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:potato successfully uploaded square_124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:26:07] "[37mGET /uploads/square_124044lpr.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:26:09] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 13:26:09] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:flask.app:<User potato> failed login
+INFO:flask.app:potato logged in successfully
+WARNING:flask.app:potato unsuccessfully attempted to upload cert.pem
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+ERROR:flask.app:Exception on /logout [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 120, in logout
+    username = current_user.username
+  File "/usr/lib/python3.6/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'username'
+ERROR:flask.app:Exception on /logout [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 120, in logout
+    username = current_user.username
+  File "/usr/lib/python3.6/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'username'
+ERROR:flask.app:Exception on /logout [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 120, in logout
+    username = current_user.username
+  File "/usr/lib/python3.6/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'username'
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:10:27] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:10:27] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:10:28] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:10:28] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:TagName: USER potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:10:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:10:34] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:10:34] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:potato logged out successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:12:16] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:12:16] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:12:16] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:Anonymous resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:12:20] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:12:20] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:12:20] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:12:32] "[1m[31mPOST /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:12:33] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:12:33] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:12:35] "[1m[31mPOST /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:12:36] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:12:36] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:00] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:03] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:03] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:04] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:04] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:06] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:06] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:06] "[1m[31mGET /gallery HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:08] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:08] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: Anonymous resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:13] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:13] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:15] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:15] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:16] "[1m[31mGET /gallery HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:18] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:18] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:22] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:25] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:14:25] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:16:24] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:16:24] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: Anonymous resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:16:29] "[37mPOST / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:16:30] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:16:30] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:16:35] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:16:35] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:16:43] "[1m[31mGET /gallery HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:16:46] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:16:46] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:18:22] "[1m[31mGET /gallery HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:18:24] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:18:24] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:18:33] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:18:33] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:18:35] "[32mGET /gallery HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:18:35] "[37mGET /register HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:18:35] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:18:45] "[32mGET /gallery HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:18:45] "[37mGET /register HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:18:45] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:18:58] "[37mPOST /register HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:18:58] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:09] "[32mPOST /register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:09] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:09] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny2 logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:21] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:21] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny2 resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:25] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:25] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:25] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:27] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:27] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:28] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:28] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny2 resized lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:35] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:35] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:35] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:36] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:36] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:37] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:19:37] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny2 logged out successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:21:28] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:21:28] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:21:28] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:21:30] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:21:30] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:21:33] "[37mGET /register HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:21:33] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:21:50] "[32mPOST /register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:21:50] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:21:50] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny3 logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:21:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:21:56] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:21:56] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny3 resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:01] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:01] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:01] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:02] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:02] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:18] "[32mGET /gallery HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:18] "[37mGET /register HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:18] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:27] "[37mPOST /register HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:27] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: <User danny4> registered successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:37] "[32mPOST /register HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:37] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:37] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny4 logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:41] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:41] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny4 resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:47] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:47] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:47] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:50] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:50] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:53] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:22:53] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny4 resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:01] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:01] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:01] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:04] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:04] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:05] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:05] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR:flask.app:Exception on /logout [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 120, in logout
+    username = current_user.username
+  File "/usr/lib/python3.6/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'username'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:47] "[1m[35mGET /logout HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:48] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:48] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:49] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:49] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny4 logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:54] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:54] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:55] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny4 resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:59] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:59] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:23:59] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:24:01] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:24:01] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:24:02] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:41] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:41] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:42] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:42] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny4 logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:47] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:47] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny4 resized lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:51] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:51] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:51] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:57] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:57] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:58] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:28:58] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:38] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:38] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:39] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:39] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny4 logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:44] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:44] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: danny4 resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:48] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:48] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:48] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:50] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:50] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:51] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:29:51] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:16] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:16] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:18] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:18] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+WARNING:flask.app:USER: <User potato> failed login
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:23] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:23] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:29] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:29] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato resized 124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:35] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:flask.app:USER: potato successfully uploaded square_124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:36] "[37mGET /uploads/square_124044lpr.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:39] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:39] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:40] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:40] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:40] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:40] "[37mGET /uploads/square_124044lpr.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:47] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:30:47] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 41, in index
+    file = square(filename, int(list(request.form.items())[0][1]))
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 74, in square
+    if current_user.is_authenticated:
+  File "/usr/lib/python3.6/site-packages/PIL/Image.py", line 2609, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '45702489_265633160963000_6978149780899758080_n.jpg'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:32:44] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:12] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:12] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 41, in index
+    file = square(filename, int(list(request.form.items())[0][1]))
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 74, in square
+    if current_user.is_authenticated:
+  File "/usr/lib/python3.6/site-packages/PIL/Image.py", line 2609, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'Dairy_milk_vs_soy_milk_1390X690.jpg'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:32] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:43] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:43] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:45] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:45] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:45] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:45] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:45] "[37mGET /uploads/square_124044lpr.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:47] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:47] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato logged out successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:48] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:48] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:48] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:49] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:49] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:54] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:59] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:33:59] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 41, in index
+    file = square(filename, int(list(request.form.items())[0][1]))
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 73, in square
+    img = im.open(image_name)
+  File "/usr/lib/python3.6/site-packages/PIL/Image.py", line 2609, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'Dairy_milk_vs_soy_milk_1390X690.jpg'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:34:05] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:34:16] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:34:16] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:34:20] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:flask.app:USER: potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:34:20] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:34:21] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:34:21] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:35:37] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:35:37] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:35:41] "[1m[31mPOST / HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:37:48] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:37:48] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:37:49] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:37:50] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:37:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:37:55] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:37:55] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 40, in index
+    file.save(os.path.join(app.config["/home/danny/Documents/Programs/App_Sec/temp"], filename))
+KeyError: '/home/danny/Documents/Programs/App_Sec/temp'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:37:59] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:38:15] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:38:15] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 40, in index
+    file = square(filename, int(list(request.form.items())[0][1]))
+KeyError: '/home/danny/Documents/Programs/App_Sec/temp'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:12] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:13] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:13] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 40, in index
+    file = square(filename, int(list(request.form.items())[0][1]))
+KeyError: '/home/danny/Documents/Programs/App_Sec/temp'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:23] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:24] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:24] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR:flask.app:Exception on /logout [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 120, in logout
+    username = current_user.username
+  File "/usr/lib/python3.6/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'AnonymousUserMixin' object has no attribute 'username'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:44] "[1m[35mGET /logout HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:47] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:47] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:48] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:48] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:52] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:52] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 41, in index
+    file = square(filename, int(list(request.form.items())[0][1]))
+ValueError: invalid literal for int() with base 10: ''
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:56] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:57] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:57] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato resized 23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:59] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:flask.app:USER: potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:39:59] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:00] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:00] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:01] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:01] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_23319136_1701596476529771_2479487601320492150_n.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:01] "[37mGET /uploads/square_23319136_1701596476529771_2479487601320492150_n.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:01] "[37mGET /uploads/square_124044lpr.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:41] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:41] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:43] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:43] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on https://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:48] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:48] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:49] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:49] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato logged in successfully
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:53] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:40:53] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:04] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:04] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:05] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:05] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato resized lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:09] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:flask.app:USER: potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:09] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:10] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:10] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:12] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:12] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:12] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:13] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato resized 124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:25] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:flask.app:USER: potato successfully uploaded square_124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:25] "[37mGET /uploads/square_124044lpr.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:26] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:26] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:27] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:27] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:27] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:27] "[37mGET /uploads/square_124044lpr.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:28] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:28] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+ERROR:flask.app:Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 41, in index
+    file = square(filename, int(list(request.form.items())[0][1]))
+  File "/mnt/Mint/danny/Documents/Programs/git-repos/App-Sec/App_Sec/app/routes.py", line 73, in square
+    img = im.open(image_name)
+  File "/usr/lib/python3.6/site-packages/PIL/Image.py", line 2609, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'Dairy_milk_vs_soy_milk_1390X690.jpg'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:38] "[1m[35mPOST / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:39] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:39] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato resized Dairymilkvssoymilk1390X690.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:59] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:flask.app:USER: potato successfully uploaded square_Dairymilkvssoymilk1390X690.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:41:59] "[37mGET /uploads/square_Dairymilkvssoymilk1390X690.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:00] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:00] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:02] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:02] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:02] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:02] "[37mGET /uploads/square_124044lpr.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_Dairymilkvssoymilk1390X690.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:02] "[37mGET /uploads/square_Dairymilkvssoymilk1390X690.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:04] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:04] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato resized Dairymilkvssoymilk1390X690.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:22] "[32mPOST / HTTP/1.1[0m" 302 -
+INFO:flask.app:USER: potato successfully uploaded square_Dairymilkvssoymilk1390X690.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:22] "[37mGET /uploads/square_Dairymilkvssoymilk1390X690.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:23] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:23] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:25] "[37mGET /gallery HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:25] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_lake.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:25] "[37mGET /uploads/square_lake.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_124044lpr.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:25] "[37mGET /uploads/square_124044lpr.jpg HTTP/1.1[0m" 200 -
+INFO:flask.app:USER: potato successfully uploaded square_Dairymilkvssoymilk1390X690.jpg
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:25] "[37mGET /uploads/square_Dairymilkvssoymilk1390X690.jpg HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:28] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2018 14:42:28] "[37mGET /static/styles/bootstrap.css HTTP/1.1[0m" 200 -

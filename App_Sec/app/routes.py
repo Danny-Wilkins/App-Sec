@@ -45,24 +45,24 @@ def index():
                 image = Image(url=filename, author=current_user)
                 try:
                     db.session.add(image)
-                    db.session.commit()
+                    try:
+                        db.session.commit()
+                    except:
+                        db.session.rollback()
                     flash("Saved!")
-                    app.logger.info("%s uploaded %s", current_user.username, file.filename)
+                    app.logger.info("USER: %s uploaded %s", current_user.username, file.filename)
                 except Exception as e:
-                    db.session.add(image)
-                    db.session.commit()
-                    flash("Saved!")
-                    app.logger.info("%s uploaded %s", current_user.username, file.filename)
+                    return redirect(url_for("uploaded_file", filename=filename))
         
                 return redirect(url_for("uploaded_file", filename=filename))
                 #return redirect(url_for("index")) #Broken so I'm not using the gallery approach for now
             else:
                 #return redirect(url_for("uploaded_file", filename=filename))
-                return redirect(url_for("uploaded_file", filename=filename))
+                return send_from_directory(app.config["UPLOAD_FOLDER"], filename)
         else:
             flash("Something went wrong!")
             if current_user.is_authenticated:
-                app.logger.info("%s attempted to upload %s", current_user.username, file.filename)
+                app.logger.warning("USER: %s unsuccessfully attempted to upload %s", current_user.username, file.filename)
 
             return render_template("upload.html") 
 
@@ -71,8 +71,10 @@ def index():
 def square(image_name, width):
 
     img = im.open(image_name)
-
-    app.logger.info("%s resized %s", current_user.username, image_name)
+    if current_user.is_authenticated:
+        app.logger.info("USER: %s resized %s", current_user.username, image_name)
+    else:
+        app.logger.info("USER: Anonymous resized %s", image_name)
     return img.resize((width, width), im.ANTIALIAS)
 
 @app.route("/uploads/<filename>")
@@ -81,18 +83,21 @@ def uploaded_file(filename):
         for image in current_user.images.all():
             if filename == image.url:
                 #if os.path.join(app.config["UPLOAD_FOLDER"], filename) in current_user.images.all():
-                app.logger.info("%s successfully uploaded %s", current_user.username, filename)
+                app.logger.info("USER: %s successfully uploaded %s", current_user.username, filename)
                 return send_from_directory(app.config["UPLOAD_FOLDER"], filename)
-
+    else:
+        return render_template("upload.html")
     return render_template("upload.html")
     #else:
     #    return redirect(url_for("index"))
 
 @app.route("/gallery")
-@login_required
 def gallery():
     user = current_user
-    return render_template("gallery.html", user=user)
+    if current_user.is_authenticated:
+        return render_template("gallery.html", user=user)
+    else:
+        return redirect(url_for("register"))
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -103,10 +108,10 @@ def login():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            app.logger.info("%s failed login", user)
+            app.logger.warning("USER: %s failed login", user)
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-        app.logger.info("%s logged in successfully", current_user.username)
+        app.logger.info("USER: %s logged in successfully", current_user.username)
         return redirect(url_for('index'))
     return render_template('login.html', title='Sign In', form=form)
 
@@ -114,7 +119,7 @@ def login():
 def logout():
     username = current_user.username
     logout_user()
-    app.logger.info("%s logged out successfully", username)
+    app.logger.info("USER: %s logged out successfully", username)
     return redirect(url_for("index"))
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -128,6 +133,6 @@ def register():
         db.session.add(user)
         db.session.commit()
         flash('Congratulations, you are now a registered user!')
-        app.logger.info("%s registered successfully", user)
+        app.logger.info("USER: %s registered successfully", user)
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)

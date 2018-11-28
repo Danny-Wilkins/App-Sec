@@ -7,5 +7,5 @@ def make_shell_context():
     return {"db": db, "User": User, "Image": Image}
 
 if __name__ == '__main__':
-    logging.basicConfig(filename="error.log", level=logging.DEBUG)
-    app.run(ssl_context=("cert.pem", "key.pem"), debug=True)
+    logging.basicConfig(filename="error.log", level=logging.INFO)
+    app.run(ssl_context=("cert.pem", "key.pem"), debug=False)
