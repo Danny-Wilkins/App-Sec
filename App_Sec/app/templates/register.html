@@ -4,7 +4,7 @@
 <div class="jumbotron text-center" id="top" style="background-image: url({{url_for('static', filename='img/food.jpg')}}); background-size:cover;">
     <div class="container">
         <h1>Register</h1>
-        <form action="" method="post">
+        <form action="" method="post" autocomplete="off">
             {{ form.hidden_tag() }}
             <p>
                 {{ form.username.label }}<br>
